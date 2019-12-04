@@ -1,5 +1,16 @@
 <?php
+    include ('xml2pdf/fpdf181/fpdf.php');
     require("config.php");
+    class PDF extends FPDF{
+        
+        function Header(){
+            
+        }
+        function Footer(){
+
+        }
+        
+    }
     header("Content-type: text / xml");
     $enlace = new mysqli($host,$user,$pass) or die ("Error MySQL");
     mysqli_select_db($enlace,$database) or die ("Error en la Base de Datos");
@@ -18,5 +29,16 @@
     $salida_xml.= "\t</Producto>\n";
     }
     $salida_xml.="</almacen>";
-    echo $salida_xml;
+
+    $pdf = new PDF();
+    $pdf->AddPage();
+    $pdf->SetFont('Arial','B',16);
+    $pdf->Cell(40,10,"$salida_xml");
+
+    /*
+    $obj = new Xml2Pdf($salida_xml);
+    $pdf = $obj->render();
+    $pdf->AddPage(10,10);
+*/
+    $pdf->Output();
 ?>

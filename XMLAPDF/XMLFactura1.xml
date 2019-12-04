@@ -1,0 +1,26 @@
+<?xml version="1.0"?><Factura>
+	<Datos>
+	<idFactura>1</idFactura>
+	<Ventas>
+	<idVenta>1</idVenta>
+	<idEmpleado>1</idEmpleado>
+	<idCliente>1</idCliente>
+	<fecha>2019-11-30 20:10:00</fecha>
+	<total>300.000</total>
+	</Ventas>
+	<Empleado>
+	<Nombre>David</Nombre>
+	<Paterno>Montiel</Paterno>
+	<Materno>Rosas</Materno>
+	</Empleado>
+	<Cliente
+>	<Nombre>Omar</Nombre>
+	<Paterno>Zamora</Paterno>
+	<Materno>Ramon</Materno>
+	<Direccion>Privada Macadamia Fraccionamiento Santa Teresa</Direccion>
+	<Telefono>5596325674</Telefono>
+	<Correo>zaro98@hotmail.com</Correo>
+	<NIF>ZARO981201TT9</NIF>
+	</Cliente>
+	</Datos>
+</Factura>
